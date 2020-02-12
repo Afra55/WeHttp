@@ -1,6 +1,6 @@
 package com.afra55.httpforus.h
 
-import com.thd.thdn.LuckLog
+import com.afra55.httpforus.WeHelpLog
 import com.afra55.httpforus.u.WeHelpJsonUtils
 import okhttp3.ResponseBody
 import retrofit2.Converter
@@ -12,7 +12,7 @@ import java.lang.reflect.Type
  * @date 2019-06-19
  * A smile is the best business card.
  */
-class JsonResponseBodyConverter<T>(var type: Type) : Converter<ResponseBody, T>{
+class WeHelpJsonResponseBodyConverter<T>(var type: Type) : Converter<ResponseBody, T>{
 
 
     override fun convert(value: ResponseBody): T? {
@@ -31,7 +31,7 @@ class JsonResponseBodyConverter<T>(var type: Type) : Converter<ResponseBody, T>{
 
             return WeHelpJsonUtils.parseObject(buffer.toString(), type)
         } catch (e: Exception) {
-            LuckLog.e("convert", e)
+            WeHelpLog.e("convert", e)
         }
 
         return null

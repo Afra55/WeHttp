@@ -5,13 +5,13 @@ package com.afra55.httpforus.h
  * {link http://afra55.github.io}
  */
 
-class LuckRequestQuery {
+class WeHelpRequestQuery {
 
     var data = HashMap<String, Any>()
 
 
 
-    fun withParam(param: String, obj: Any?): LuckRequestQuery {
+    fun withParam(param: String, obj: Any?): WeHelpRequestQuery {
         if (obj != null) {
             data[param] = obj
         }

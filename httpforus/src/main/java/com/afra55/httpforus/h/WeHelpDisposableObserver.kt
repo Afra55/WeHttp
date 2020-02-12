@@ -13,7 +13,7 @@ import java.io.BufferedReader
  * 这只是个例子，具体自行修改
  * -1 UnKnow 错误； -2 网络错误
  */
-abstract class DisposableObserver<T> : DisposableObserver<T>() {
+abstract class WeHelpDisposableObserver<T> : DisposableObserver<T>() {
 
     abstract fun onSuccess(t: T)
 

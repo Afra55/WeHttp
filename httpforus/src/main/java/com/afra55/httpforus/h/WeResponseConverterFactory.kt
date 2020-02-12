@@ -12,22 +12,22 @@ import java.lang.reflect.Type
  * @date 2019-06-19
  * A smile is the best business card.
  */
-class ResponseConverterFactory(var jsonObject: JSONObject, var mediaTypeStr: String?) : Converter.Factory() {
+class WeResponseConverterFactory(var jsonObject: JSONObject, var mediaTypeStr: String?) : Converter.Factory() {
 
     companion object {
         @JvmStatic
-        fun create(): ResponseConverterFactory {
+        fun create(): WeResponseConverterFactory {
             return create(JSONObject(), null)
         }
 
         @JvmStatic
-        fun create(mediaType: String?): ResponseConverterFactory {
+        fun create(mediaType: String?): WeResponseConverterFactory {
             return create(JSONObject(), mediaType)
         }
 
         @JvmStatic
-        private fun create(jsonObject: JSONObject, mediaType: String?): ResponseConverterFactory {
-            return ResponseConverterFactory(jsonObject, mediaType)
+        private fun create(jsonObject: JSONObject, mediaType: String?): WeResponseConverterFactory {
+            return WeResponseConverterFactory(jsonObject, mediaType)
         }
     }
 
@@ -36,7 +36,7 @@ class ResponseConverterFactory(var jsonObject: JSONObject, var mediaTypeStr: Str
         annotations: Array<Annotation>,
         retrofit: Retrofit
     ): Converter<ResponseBody, *>? {
-        return JsonResponseBodyConverter<Converter<ResponseBody, *>?>(type)
+        return WeHelpJsonResponseBodyConverter<Converter<ResponseBody, *>?>(type)
     }
 
     override fun requestBodyConverter(
@@ -45,7 +45,7 @@ class ResponseConverterFactory(var jsonObject: JSONObject, var mediaTypeStr: Str
         methodAnnotations: Array<Annotation>,
         retrofit: Retrofit
     ): Converter<*, RequestBody>? {
-        return JsonRequestBodyConverter<Converter<ResponseBody, *>?>(mediaTypeStr)
+        return WeHelpJsonRequestBodyConverter<Converter<ResponseBody, *>?>(mediaTypeStr)
     }
 
 }

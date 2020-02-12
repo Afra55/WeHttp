@@ -7,8 +7,9 @@ import okhttp3.Response
  * @author Afra55
  * @date 2019-06-19
  * A smile is the best business card.
+ * 拦截器示例
  */
-class TokenInterceptor : Interceptor{
+class WeHelpTokenInterceptor : Interceptor{
     override fun intercept(chain: Interceptor.Chain): Response {
 
         val request = chain.request()

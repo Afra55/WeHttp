@@ -12,12 +12,14 @@ import android.content.Context
 object WeHelp {
 
     var context:Context? = null
+    var isDebugMode:Boolean = false
 
     /**
      * 在使用 WeHelp 工具之前一定要初始化
      */
-    fun init(context: Context) {
+    fun init(context: Context, isDebugMode:Boolean) {
         this.context = context.applicationContext
+        this.isDebugMode = isDebugMode
     }
 
     /**

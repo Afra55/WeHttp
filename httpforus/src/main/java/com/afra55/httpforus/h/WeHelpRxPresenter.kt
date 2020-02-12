@@ -8,7 +8,7 @@ import io.reactivex.observers.DisposableObserver
  * @date 2019-06-19
  * A smile is the best business card.
  */
-open class  RxPresenter {
+open class  WeHelpRxPresenter {
 
     private var compositeDisposable:CompositeDisposable? = null
 

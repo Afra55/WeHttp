@@ -13,7 +13,7 @@ import java.nio.charset.Charset
  * @date 2019-06-19
  * A smile is the best business card.
  */
-class JsonRequestBodyConverter<T>(var mediaTypeStr:String? = null) : Converter<T, RequestBody>{
+class WeHelpJsonRequestBodyConverter<T>(var mediaTypeStr:String? = null) : Converter<T, RequestBody>{
 
     override fun convert(value: T): RequestBody? {
         try {
