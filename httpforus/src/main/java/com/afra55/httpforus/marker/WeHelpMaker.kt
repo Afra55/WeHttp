@@ -11,8 +11,8 @@ import java.util.concurrent.ConcurrentHashMap
  * @date 2019-06-24
  * A smile is the best business card.
  */
-object PieMaker {
-    private var makerMap: ConcurrentHashMap<String, EasyProgressDialog> = ConcurrentHashMap(2)
+object WeHelpMaker {
+    private var makerMap: ConcurrentHashMap<String, WeHelpEasyProgressDialog> = ConcurrentHashMap(2)
 
     fun showMarker(
         context: Context,
@@ -20,16 +20,16 @@ object PieMaker {
         message: String? = null,
         canCancelable: Boolean = false,
         cancelListener: DialogInterface.OnCancelListener? = null
-    ): EasyProgressDialog? {
+    ): WeHelpEasyProgressDialog? {
 
         try {
             var easyProgressDialog = makerMap[flag]
             @Suppress("CascadeIf")
             if (easyProgressDialog == null) {
-                easyProgressDialog = EasyProgressDialog(context, message)
+                easyProgressDialog = WeHelpEasyProgressDialog(context, message)
             } else if (easyProgressDialog.context != context) {
                 easyProgressDialog.dismiss()
-                easyProgressDialog = EasyProgressDialog(context, message)
+                easyProgressDialog = WeHelpEasyProgressDialog(context, message)
             } else if (easyProgressDialog.isShowing) {
                 return easyProgressDialog
             }

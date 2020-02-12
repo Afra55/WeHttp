@@ -16,7 +16,7 @@ import com.afra55.httpforus.R
  * 一个半透明窗口,包含一个Progressbar 和 Message部分. 其中Message部分可选. 可单独使用,也可以使用
  * [DialogMaker] 进行相关窗口显示.
  */
-class EasyProgressDialog @JvmOverloads constructor(
+class WeHelpEasyProgressDialog @JvmOverloads constructor(
     mContext: Context,
     private var mMessage: String? = null,
     style: Int = R.style.we_help_easy_dialog_style,
