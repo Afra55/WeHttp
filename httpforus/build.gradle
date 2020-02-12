@@ -1,6 +1,18 @@
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
+apply plugin: 'com.novoda.bintray-release'
+
+//推送到Bintray配置
+publish {
+    repoName = 'WeHttp'
+    userOrg = "afra55"
+    groupId = "com.afra55"
+    artifactId = 'wehelp'
+    publishVersion = "1.0.0" //版本号
+    desc = "We Will Help You" //描述，选填
+    website = "https://github.com/Afra55/WeHttp"
+}
 android {
     compileSdkVersion 29
     buildToolsVersion "29.0.2"
@@ -10,7 +22,7 @@ android {
         minSdkVersion 15
         targetSdkVersion 29
         versionCode 1
-        versionName "1.0"
+        versionName "1.0.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles 'consumer-rules.pro'
