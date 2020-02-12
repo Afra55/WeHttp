@@ -17,9 +17,13 @@ object WeHelp {
     /**
      * 在使用 WeHelp 工具之前一定要初始化
      */
-    fun init(context: Context, isDebugMode:Boolean) {
+    fun init(context: Context, isDebugMode:Boolean, logTagPre:String?=null) {
         this.context = context.applicationContext
         this.isDebugMode = isDebugMode
+        WeHelpLog.isDebug = isDebugMode
+        if (!logTagPre.isNullOrEmpty()) {
+            WeHelpLog.PRE_TAG = logTagPre
+        }
     }
 
     /**

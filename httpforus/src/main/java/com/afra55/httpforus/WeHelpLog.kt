@@ -4,16 +4,16 @@ import android.util.Log
 
 object WeHelpLog {
     @JvmStatic
-    var PIE_TAG = "FORUS_"
+    var PRE_TAG = "FORUS_"
     @JvmStatic
     var isDebug = false
 
     @JvmStatic
     fun makeLogTag(string: String): String {
-        if (string.length > 23 - PIE_TAG.length) {
-            return PIE_TAG + string.substring(0, 23 - PIE_TAG.length - 1)
+        if (string.length > 23 - PRE_TAG.length) {
+            return PRE_TAG + string.substring(0, 23 - PRE_TAG.length - 1)
         }
-        return PIE_TAG + string
+        return PRE_TAG + string
     }
 
     @JvmStatic
