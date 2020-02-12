@@ -19,8 +19,8 @@ import com.afra55.httpforus.R
 class EasyProgressDialog @JvmOverloads constructor(
     mContext: Context,
     private var mMessage: String? = null,
-    style: Int = R.style.easy_dialog_style,
-    private val mLayoutId: Int = R.layout.easy_progress_dialog
+    style: Int = R.style.we_help_easy_dialog_style,
+    private val mLayoutId: Int = R.layout.we_help_easy_progress_dialog
 ) : Dialog(mContext, style) {
 
     private var message: TextView? = null

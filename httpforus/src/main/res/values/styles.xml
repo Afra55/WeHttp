@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <style name="easy_dialog_style" parent="@android:style/Theme.Dialog">
+    <style name="we_help_easy_dialog_style" parent="@android:style/Theme.Dialog">
         <item name="android:windowFrame">@null</item>
         <!-- 边框 -->
         <item name="android:windowIsFloating">true</item>
@@ -15,7 +15,7 @@
         <!-- 后面的activity变暗 -->
 
     </style>
-    <style name="progressBar" parent="Base.Widget.AppCompat.ProgressBar">
+    <style name="WeHelpProgressBar" parent="Base.Widget.AppCompat.ProgressBar">
         <item name="android:indeterminateTint" tools:targetApi="lollipop">@color/okhttp_loading_color</item>
         <item name="android:indeterminateTintMode" tools:targetApi="lollipop">src_atop</item>
     </style>
