@@ -10,7 +10,7 @@ import androidx.recyclerview.widget.RecyclerView
  * A smile is the best business card.
  */
 
-abstract class LuckRecyclerAdapter(val context:Context) : RecyclerView.Adapter<WeHelpViewHolder>(){
+abstract class WeHelpRecyclerAdapter(val context:Context) : RecyclerView.Adapter<WeHelpViewHolder>(){
 
 
     private val dataList:MutableList<WeHelpBlue> = ArrayList()

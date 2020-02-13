@@ -11,7 +11,7 @@ import com.afra55.httpforus.WeHelpLog
  * A smile is the best business card.
  * sugar 示例
  */
-class PieTempSugar(context: Context, parent: ViewGroup) : WeHelpBaseSugar(context, parent, R.layout.we_help_sugar_empaty){
+class WeHelpTempSugar(context: Context, parent: ViewGroup) : WeHelpBaseSugar(context, parent, R.layout.we_help_sugar_empaty){
 
     override fun <T : WeHelpBlue> bind(t: T?, clickListener: RecyclerAdapterItemClickListener?) {
         WeHelpLog.i("temp")
