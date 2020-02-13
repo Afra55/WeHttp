@@ -26,10 +26,4 @@ object WeHelp {
         }
     }
 
-    /**
-     * 在应用结束的时候释放 context
-     */
-    fun destroy() {
-        context = null
-    }
 }
