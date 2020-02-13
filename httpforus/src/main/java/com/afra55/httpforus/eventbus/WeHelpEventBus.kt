@@ -13,12 +13,12 @@ object WeHelpEventBus {
 
 
     @JvmStatic
-    fun postError(type: String, errorCode: Int, errorMessage: String, errorObject: Any? = null) {
+    fun postError(type: Int, errorCode: Int, errorMessage: String, errorObject: Any? = null) {
         EventBus.getDefault().post(WeHelpMessageEvent(type, arrayListOf(WeHelpError(errorCode, errorMessage, errorObject))))
     }
 
     @JvmStatic
-    fun post(type: String, vararg any: Any) {
+    fun post(type: Int, vararg any: Any) {
         val event = arrayListOf<Any>()
         for (v in any) {
             event.add(v)
@@ -27,7 +27,7 @@ object WeHelpEventBus {
     }
 
     @JvmStatic
-    fun postSticky(type: String, vararg any:Any) {
+    fun postSticky(type: Int, vararg any:Any) {
         val event = arrayListOf<Any>()
         for (v in any) {
             event.add(v)
