@@ -9,7 +9,7 @@ publish {
     userOrg = "afra55"
     groupId = "com.afra55"
     artifactId = 'wehelp'
-    publishVersion = "1.0.1" //版本号
+    publishVersion = "1.0.2" //版本号
     desc = "We Will Help You" //描述，选填
     website = "https://github.com/Afra55/WeHttp"
 }
@@ -22,7 +22,7 @@ android {
         minSdkVersion 15
         targetSdkVersion 29
         versionCode 1
-        versionName "1.0.1"
+        versionName "1.0.2"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles 'consumer-rules.pro'
