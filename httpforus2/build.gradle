@@ -44,4 +44,10 @@ dependencies {
     implementation 'androidx.core:core-ktx:1.2.0'
 
 
+    // retrofit
+    def retrofit_versions = '2.6.0'
+    api "com.squareup.retrofit2:retrofit:$retrofit_versions"
+    api "com.squareup.retrofit2:converter-gson:$retrofit_versions"
+    def okhttp_logging_interceptor = "3.9.0"
+    api "com.squareup.okhttp3:logging-interceptor:${okhttp_logging_interceptor}"
 }
